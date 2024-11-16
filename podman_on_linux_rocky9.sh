@@ -1,6 +1,3 @@
-#installing podman and podman compose on Linux Rocky 9
-#podman-compose version 1.2.0
-#podman version 4.9.4-rhel
 #!/bin/bash
 sudo dnf update -y
 sudo dnf install podman -y
@@ -16,4 +13,5 @@ sudo chmod u+x /usr/local/bin/podman-compose
 export PATH=$PATH:/usr/local/bin
 /root/myenv/bin/python3 -m pip install --upgrade pip
 echo "Cai dat podman-compose thanh cong"
+sudo ln -s /usr/local/bin/podman-compose /usr/bin/podman-compose
 podman-compose --version
